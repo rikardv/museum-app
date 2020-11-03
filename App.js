@@ -64,6 +64,9 @@ screenOptions={
   <Stack.Screen name="Floors" component={Floors} options={{title: 'Våningar'}}/>
 </Stack.Navigator>
     </NavigationContainer>
+
+
+
    
   
   );
