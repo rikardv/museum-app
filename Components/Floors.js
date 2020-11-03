@@ -8,7 +8,7 @@ import 'react-native-gesture-handler'
 
 
 const Images = () =>(
-    <Image source = {require('/Users/rikard/KoMa/assets/vaning.png')} style = {{ width: 380, height: 650, resizeMode: "stretch", position: 'absolute'}}/>
+    <Image source = {require('/Users/rikard/KoMa/assets/Resurs8.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}/>
     
   )
 
@@ -19,7 +19,20 @@ const Floors = () => {
        
            
             <View style={styles.floors}>
-            <Images></Images>
+                
+                <View style={styles.back}>
+                <Image  source = {require('/Users/rikard/KoMa/assets/Resurs8.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}>
+                    
+                    </Image>
+    
+                </View>
+              
+              <View style={styles.buttons}>
+              <Image onPress={()=> navigation.navigate('Events')} source = {require('/Users/rikard/KoMa/assets/Resurs1.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}/>
+
+              </View>
+
+
            
             </View>
             
@@ -58,23 +71,26 @@ const styles = StyleSheet.create({
 
         
 
-        background: {
-            
-            backgroundColor:'#252525',
-
-        },
+      
+    
 
         buttons: {
 
             borderWidth: 5,
-            flex: 0.8,
+            flex: 0.1,
         
-            flexDirection: 'column',
-            justifyContent: 'space-between',
+            
+           
             
             
 
         },
+
+        back: {
+
+            flex: 1,
+            
+        }
 
        
       
