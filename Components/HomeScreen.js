@@ -1,7 +1,7 @@
 
 import 'react-native-gesture-handler'
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar} from 'react-native';
+import {  StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar} from 'react-native';
 import FlatButton from './FlatButton.js'
 
 const ImagesExample = () =>(
@@ -13,6 +13,20 @@ const HomeScreen = ({navigation}) => {
 
     return(
         <SafeAreaView style={styles.container}>
+
+<StatusBar
+    barStyle = "light-content"
+    // dark-content, light-content and default
+    hidden = {false}
+    //To hide statusBar
+    backgroundColor = "#ffc230"
+    //Background color of statusBar only works for Android
+    translucent = {false}
+    //allowing light, but not detailed shapes
+    networkActivityIndicatorVisible = {true}
+/>
+
+
   
         <View style={styles.header}>
           <ImagesExample></ImagesExample>
@@ -20,8 +34,6 @@ const HomeScreen = ({navigation}) => {
           
         </View>
 
-      
-       
         <View style={styles.headerText}>
         <Text style={styles.textheader}>Välkommen!</Text>
         </View>
@@ -29,9 +41,10 @@ const HomeScreen = ({navigation}) => {
        <View style={styles.buttons}>
        
        <FlatButton onPress={()=> navigation.navigate('Floors')} text='Besökskarta' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('Floors')} text='Utställningar' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('Floors')} text='Evenemang' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('Floors')} text='Besöksinfo' ></FlatButton>
+       <FlatButton onPress={()=> navigation.navigate('Exhibitions')} text='Utställningar' ></FlatButton>
+       <FlatButton onPress={()=> navigation.navigate('Events')} text='Evenemang' ></FlatButton>
+       <FlatButton onPress={()=> navigation.navigate('VisitorInfo')} text='Besöksinfo' ></FlatButton>
+      
        
 
          
@@ -55,11 +68,13 @@ const HomeScreen = ({navigation}) => {
       backgroundColor: '#252525',
       alignItems: 'center',
       justifyContent: 'center',
+      borderWidth: 5,
     },
   
     headerText: {
   
       flex: 1,
+      
     },
   
     header: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Text, View, Image, SafeAreaView, Button} from 'react-native';
 
-const FlatButton = ({text, onPress}) => {
+const FloorButton = ({text, onPress}) => {
 
     return(
   
@@ -20,22 +20,24 @@ const styles = StyleSheet.create({
 
     button: {
 
-        borderRadius: 5,
+        borderRadius: 4,
         paddingVertical: 14,
         paddingHorizontal: 10,
-        backgroundColor: '#ffc230',
+        backgroundColor: 'rgba(52, 52, 52, 0.9)',
+       
+        
         width: 300
          
         
         },
       
         buttonText: {
-          color: 'black',
+          color: 'white',
           fontWeight: 'bold',
-          fontSize: 18,
+          fontSize: 24,
           textAlign: 'center'
         },
 });
   
 
-  export default FlatButton
+  export default FloorButton

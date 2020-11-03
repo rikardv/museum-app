@@ -27,9 +27,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import FlatButton from './Components/FlatButton.js'
 import Floors from './Components/Floors.js'
 import HomeScreen from './Components/HomeScreen.js'
+import Exhibitions from './Components/Exhibitions.js'
+import Events from'./Components/Events.js'
+import VisitorInfo from './Components/VisitorInfo.js'
 
 
 
@@ -50,7 +52,7 @@ screenOptions={
 
   headerStyle: {
     backgroundColor: '#252525',
-    height: 30,
+  
   },
   headerTintColor: '#fff',
   headerTitleStyle: {
@@ -62,6 +64,9 @@ screenOptions={
 }}>
   <Stack.Screen name="Home" component={HomeScreen} options={{title: 'Startsida' }}/>
   <Stack.Screen name="Floors" component={Floors} options={{title: 'Våningar'}}/>
+  <Stack.Screen name="Exhibitions" component={Exhibitions} options={{title: 'Utställningar'}}/>
+  <Stack.Screen name="Events" component={Events} options={{title: 'Evenemang'}}/>
+  <Stack.Screen name="VisitorInfo" component={VisitorInfo} options={{title: 'Besöksinfo'}}/>
 </Stack.Navigator>
     </NavigationContainer>
 

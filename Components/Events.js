@@ -1,15 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, Button} from 'react-native';
 
-const Exhibitions = () => {
+const Events = () => {
 
     return (
-        <View>
-
-
-            
-        </View>
+        <View></View>
     )
 }
 
-export default Exhibitions
+export default Events
