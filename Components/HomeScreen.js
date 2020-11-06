@@ -19,7 +19,7 @@ const HomeScreen = ({navigation}) => {
     // dark-content, light-content and default
     hidden = {false}
     //To hide statusBar
-    backgroundColor = "#ffc230"
+    backgroundColor = "#252525"
     //Background color of statusBar only works for Android
     translucent = {false}
     //allowing light, but not detailed shapes
@@ -68,7 +68,7 @@ const HomeScreen = ({navigation}) => {
       backgroundColor: '#252525',
       alignItems: 'center',
       justifyContent: 'center',
-      borderWidth: 5,
+      
     },
   
     headerText: {

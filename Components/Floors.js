@@ -1,42 +1,78 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, Button} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, Button, ImageBackground} from 'react-native';
 import Flatbutton from './FlatButton.js'
 import FloorButton from './FloorButton.js'
-
 import 'react-native-gesture-handler'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-const Images = () =>(
-    <Image source = {require('/Users/rikard/KoMa/assets/Resurs8.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}/>
-    
-  )
 
-const Floors = () => {
+
+const Floors = ({navigation}) => {
 
     return(
 
        
-           
-            <View style={styles.floors}>
-                
-                <View style={styles.back}>
-                <Image  source = {require('/Users/rikard/KoMa/assets/Resurs8.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}>
-                    
-                    </Image>
-    
-                </View>
-              
-              <View style={styles.buttons}>
-              <Image onPress={()=> navigation.navigate('Events')} source = {require('/Users/rikard/KoMa/assets/Resurs1.png')} style = {{ width: 350, height: 800, resizeMode: "contain", position: 'absolute'}}/>
+           <View style={styles.container}>
 
-              </View>
+             <View style={styles.dummy}></View>
+
+<View style={styles.floors}>
+<TouchableOpacity  style={styles.opa} onPress={() => navigation.navigate('Map')}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning7.7.png')}><Text style={styles.text}>Våning 7</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity  style={styles.opa}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning6.6.png')}><Text style={styles.text}>Våning 6</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity  style={styles.opa}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning5.5.png')}><Text style={styles.text}>Våning 5</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity style={styles.opa} >
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning4.4.png')}><Text style={styles.text}>Våning 4</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity  style={styles.opa}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning3.3.png')}><Text style={styles.text}>Våning 3</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity  style={styles.opa}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning2.2.png')}><Text style={styles.text}>Våning 2</Text></ImageBackground>
+</TouchableOpacity >
+</View>
+
+<View style={styles.floors}>
+<TouchableOpacity style={styles.opa}  >
+
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning1.1.png')}>
+        <Text style={styles.text}>Våning 1</Text>
+    </ImageBackground>
+</TouchableOpacity >
+</View>
 
 
+               
+
+
+             
+          
            
             </View>
-            
 
+            
          
            
            
@@ -51,21 +87,93 @@ const Floors = () => {
 
 const styles = StyleSheet.create({
 
-    floors: {
-
+    container: {
         flex: 1,
-       flexDirection: 'column',
+backgroundColor: '#252525',
+flexDirection: 'column',
+alignItems: 'center',
+borderColor: 'green'
+
+
+        
+    },
+
+    opa:{
+        //Röd
+        
+        width:'100%',
+        height:'100%',
+      resizeMode: 'center',
+        
+        borderColor: 'red',
+        alignItems: 'center',
+    
+        
+    },
+
+    floors: {
+//Vita
+      flex: 1,
+      
+      borderColor: 'white',
+      width: '90%',
+      height: '100%',
+      borderWidth: 5,
+      borderColor: '#252525'
+      
+
+    
+      
+      
+      
+      
+
+        
+
+    },
+
+    image: {
+
+        flex:1,
+        width:'100%',
+        height: '100%',
+        
+        resizeMode: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#252525',
-        
         
        
-        
-        
-         
-        
-        },
+
+    
+
+    },
+
+    text: {
+       
+        color: 'white',
+        fontSize: 25,
+        fontWeight: 'bold'
+       
+       
+    },
+
+    textHeader: {
+
+        color: 'white',
+        fontSize: 18,
+
+
+    },
+
+    dummy: {
+        height: '2%'
+
+    }
+   
+
+       
+
+     
 
         
 
@@ -74,23 +182,9 @@ const styles = StyleSheet.create({
       
     
 
-        buttons: {
+       
 
-            borderWidth: 5,
-            flex: 0.1,
-        
-            
-           
-            
-            
-
-        },
-
-        back: {
-
-            flex: 1,
-            
-        }
+     
 
        
       
@@ -98,4 +192,6 @@ const styles = StyleSheet.create({
      
      
 });
+
+
 export default Floors

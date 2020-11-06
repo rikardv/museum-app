@@ -32,6 +32,7 @@ import HomeScreen from './Components/HomeScreen.js'
 import Exhibitions from './Components/Exhibitions.js'
 import Events from'./Components/Events.js'
 import VisitorInfo from './Components/VisitorInfo.js'
+import Map from './Components/Map.js'
 
 
 
@@ -52,6 +53,8 @@ screenOptions={
 
   headerStyle: {
     backgroundColor: '#252525',
+   
+    
   
   },
   headerTintColor: '#fff',
@@ -63,10 +66,11 @@ screenOptions={
   
 }}>
   <Stack.Screen name="Home" component={HomeScreen} options={{title: 'Startsida' }}/>
-  <Stack.Screen name="Floors" component={Floors} options={{title: 'Våningar'}}/>
+  <Stack.Screen name="Floors" component={Floors} options={{title: 'Välj en våning nedan'}}/>
   <Stack.Screen name="Exhibitions" component={Exhibitions} options={{title: 'Utställningar'}}/>
   <Stack.Screen name="Events" component={Events} options={{title: 'Evenemang'}}/>
   <Stack.Screen name="VisitorInfo" component={VisitorInfo} options={{title: 'Besöksinfo'}}/>
+  <Stack.Screen name="Map" component={Map} options={{title: 'Karta över utställningar'}}/>
 </Stack.Navigator>
     </NavigationContainer>
 
