@@ -4,7 +4,7 @@ import { ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native-g
 import ImageMapper from 'react-native-image-mapper';
 import ImageZoom from 'react-native-image-pan-zoom';
 
-const imageSource = require('/Users/rikard/KoMa/assets/van1.png');
+const imageSource = require('../assets/van1.png');
 const MAPPING = [
   {
     id: '0',
@@ -68,7 +68,7 @@ const Map = ({navigation}) => {
 
 
 
-<Image source = {require('/Users/rikard/KoMa/assets/symbolbesk.png')} style = {{ width: Dimensions.get('window').width, height: (Dimensions.get('window').height)/11, resizeMode: 'stretch', position: 'absolute',bottom: (Dimensions.get('window').height)/11 }}/>
+<Image source = {require('../assets/symbolbesk.png')} style = {{ width: Dimensions.get('window').width, height: (Dimensions.get('window').height)/11, resizeMode: 'stretch', position: 'absolute',bottom: (Dimensions.get('window').height)/11 }}/>
 
 
 <Modal

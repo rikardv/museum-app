@@ -1,8 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, Button, ImageBackground} from 'react-native';
-import Flatbutton from './FlatButton.js'
-import FloorButton from './FloorButton.js'
+import { StyleSheet, Text, View, SafeAreaView, ImageBackground} from 'react-native';
 import 'react-native-gesture-handler'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -20,44 +18,44 @@ const Floors = ({navigation}) => {
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa} onPress={() => navigation.navigate('Map')}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning7.7.png')}><Text style={styles.text}>Våning 7</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning7.7.png')}><Text style={styles.text}>Våning 7</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning6.6.png')}><Text style={styles.text}>Våning 6</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning6.6.png')}><Text style={styles.text}>Våning 6</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning5.5.png')}><Text style={styles.text}>Våning 5</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning5.5.png')}><Text style={styles.text}>Våning 5</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity style={styles.opa} >
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning4.4.png')}><Text style={styles.text}>Våning 4</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning4.4.png')}><Text style={styles.text}>Våning 4</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning3.3.png')}><Text style={styles.text}>Våning 3</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning3.3.png')}><Text style={styles.text}>Våning 3</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning2.2.png')}><Text style={styles.text}>Våning 2</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning2.2.png')}><Text style={styles.text}>Våning 2</Text></ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity style={styles.opa}  >
 
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('/Users/rikard/KoMa/assets/vaning/Vaning1.1.png')}>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning1.1.png')}>
         <Text style={styles.text}>Våning 1</Text>
     </ImageBackground>
 </TouchableOpacity >

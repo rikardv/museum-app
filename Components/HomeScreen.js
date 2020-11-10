@@ -5,7 +5,7 @@ import {  StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar} from '
 import FlatButton from './FlatButton.js'
 
 const ImagesExample = () =>(
-    <Image source = {require('/Users/rikard/KoMa/assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
+    <Image source = {require('../assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
     
   )
 
