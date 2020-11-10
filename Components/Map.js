@@ -1,56 +1,98 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, Button} from 'react-native';
-import ZoomableImage from 'react-native-interactive-image'
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, SafeAreaView, Button,Platform, PanResponder,Dimensions,Modal} from 'react-native';
+import { ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
+import ImageMapper from 'react-native-image-mapper';
+import ImageZoom from 'react-native-image-pan-zoom';
 
+const imageSource = require('/Users/rikard/KoMa/assets/van1.png');
+const MAPPING = [
+  {
+    id: '0',
+    name: 'First Area Name',
+    shape: 'circle',
+    radius: 15,
+    width: 30,
+    height: 40,
+    x1: 187,
+    y1: 157,
+    prefill: '#ffc230',
+    fill: 'blue'
+  },
+  {
+    id: '1',
+    name: 'Second Area Name',
+    shape: 'rectangle',
+    x2: 300,
+    y2: 100,
+    x1: 100,
+    y1: 300
+  },
+]
+ 
 
-const Map = () => {
+const Map = ({navigation}) => {
 
+	
+  const [modalVisible, setModalVisible] = useState(false);
+	
+	
     return (
-        <View>
 
-<ZoomableImage
-					source={ require('/Users/rikard/KoMa/assets/arbt.jpg') }
-					imageHeight={ 600 }
-					imageWidth={ 450 }
-                    annotations={ annotations }
-					popOverStyles={ { backgroundColor: 'white' } }
-/>
+     
+        
+        <View backgroundColor={'#252525'} >
 
 
-            
-        </View>
-    )
+<ImageZoom cropWidth={Dimensions.get('window').width}
+                       cropHeight={Dimensions.get('window').height}
+                       imageWidth={1988/4}
+                       imageHeight={1141/4}>
+<ImageMapper
+        
+		
+        imgWidth={1988/4}
+        imgHeight={1141/4}
+        imgSource={imageSource}
+        imgMap={MAPPING}
+        onPress={() => {
+          setModalVisible(true);
+        }}
+        
+        selectedAreaId="my_area_id"
+       
+      />
+
+
+
+</ImageZoom>
+
+
+
+<Image source = {require('/Users/rikard/KoMa/assets/symbolbesk.png')} style = {{ width: Dimensions.get('window').width, height: (Dimensions.get('window').height)/11, resizeMode: 'stretch', position: 'absolute',bottom: (Dimensions.get('window').height)/11 }}/>
+
+
+<Modal
+      animationType="fade"
+      transparent={true}
+      visible={modalVisible}
+      onRequestClose={() => {
+        Alert.alert("Modal has been closed.");
+      }}
+    >
+
+      <View onPress={() => {
+          setModalVisible(!modalVisible);
+        }} backgroundColor={'#ffc230'} height={100} width={200}  ></View>
+</Modal>
+</View>
+
+
+		
+	)
+	
+	
 }
 
-const annotations = [
-	{
-		x1: 25,
-		x2: 35,
-		y1: 20,
-		y2: 30,
-		description: 'A pair of black running sports shoes, has lace-up detail. Textile and mesh upper',
-	},
-	{
-		x1: 60,
-		x2: 70,
-		y1: 15,
-		y2: 25,
-		description: 'Shoe sole tip!',
-	},
-	{
-		x1: 20,
-		x2: 30,
-		y1: 50,
-		y2: 60,
-		description: 'Textured and patterned outsole',
-	},
-	{
-		x1: 65,
-		x2: 75,
-		y1: 65,
-		y2: 75,
-		description: 'Textured outsole with a stacked heel',
-	},
-]
+
 
 export default Map
