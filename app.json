@@ -1,4 +1,5 @@
 {
   "name": "KoMa",
-  "displayName": "KoMa"
+  "displayName": "KoMa",
+  "orientation" : "portrait"
 }

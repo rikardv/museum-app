@@ -27,8 +27,9 @@ import Exhibitions from './Components/Exhibitions.js'
 import Events from'./Components/Events.js'
 import VisitorInfo from './Components/VisitorInfo.js'
 import Map from './Components/Map.js'
-
-
+import JobbLabb from './Components/JobbLabb.js'
+import Kommande from './Components/Kommande.js'
+import Turnerande from './Components/Turnerande.js'
 
 
 const Stack = createStackNavigator();
@@ -65,6 +66,11 @@ screenOptions={
   <Stack.Screen name="Events" component={Events} options={{title: 'Evenemang'}}/>
   <Stack.Screen name="VisitorInfo" component={VisitorInfo} options={{title: 'Besöksinfo'}}/>
   <Stack.Screen name="Map" component={Map} options={{title: 'Karta över utställningar'}}/>
+  <Stack.Screen name="JobbLabb" component={JobbLabb} options={{title: 'Aktuella utställningar'}}/>
+  <Stack.Screen name="Kommande" component={Kommande} options={{title: 'Kommande utställningar'}}/>
+  <Stack.Screen name="Turnerande" component={Turnerande} options={{title: 'Turnerande utställningar'}}/>
+
+
 </Stack.Navigator>
     </NavigationContainer>
 

@@ -18,37 +18,76 @@ const Floors = ({navigation}) => {
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa} onPress={() => navigation.navigate('Map')}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning7.7.png')}><Text style={styles.text}>Våning 7</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning7.7.png')}>
+   
+
+        <Text style={styles.text}>FOTOSALONG</Text>
+       
+        </ImageBackground>
+
+        
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning6.6.png')}><Text style={styles.text}>Våning 6</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning6.6.png')}>
+    
+
+        <Text style={styles.text}>RESTAURANG</Text>
+       
+        </ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning5.5.png')}><Text style={styles.text}>Våning 5</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning5.5.png')}>
+  
+
+        <Text style={styles.text}>HEJ ROBOT</Text>
+        <Text style={styles.text}>FRAMTIDSLAND</Text>
+        <Text style={styles.text}>KRIS OCH VISION</Text>
+
+        
+        
+        </ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity style={styles.opa} >
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning4.4.png')}><Text style={styles.text}>Våning 4</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning4.4.png')}>
+   
+
+        <Text style={styles.text}>KONTOR</Text>
+       
+        </ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning3.3.png')}><Text style={styles.text}>Våning 3</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning3.3.png')}>
+   
+
+        <Text style={styles.text}>EWK-MUSÉET</Text>
+
+        
+        </ImageBackground>
 </TouchableOpacity >
 </View>
 
 <View style={styles.floors}>
 <TouchableOpacity  style={styles.opa}>
-    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning2.2.png')}><Text style={styles.text}>Våning 2</Text></ImageBackground>
+    <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning2.2.png')}>
+    
+
+        <Text style={styles.text}>RECEPTION</Text>
+        <Text style={styles.text}>KREATIVA VERKSTADEN</Text>
+        <Text style={styles.text}>JOBBLABB</Text>
+       
+        </ImageBackground>
 </TouchableOpacity >
 </View>
 
@@ -56,7 +95,12 @@ const Floors = ({navigation}) => {
 <TouchableOpacity style={styles.opa}  >
 
     <ImageBackground style={styles.image} resizeMode={'stretch'} source= {require('../assets/vaning/Vaning1.1.png')}>
-        <Text style={styles.text}>Våning 1</Text>
+        
+        <Text style={styles.text}>LILLA ARBETETS</Text>
+        <Text style={styles.text}>MAGASINET</Text>
+        <Text style={styles.text}>MATSÄCKSSRUM</Text>
+        
+        
     </ImageBackground>
 </TouchableOpacity >
 </View>
@@ -140,6 +184,7 @@ borderColor: 'green'
         justifyContent: 'center',
         alignItems: 'center',
         
+        
        
 
     
@@ -149,8 +194,14 @@ borderColor: 'green'
     text: {
        
         color: 'white',
-        fontSize: 25,
-        fontWeight: 'bold'
+        fontSize: 17,
+        fontWeight: 'bold',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowColor: 'rgba(0,0,0,0.75)',
+        textShadowRadius: 4,
+    
+
+    
        
        
     },
@@ -166,11 +217,37 @@ borderColor: 'green'
     dummy: {
         height: '2%'
 
-    }
+    },
    
 
        
+singletextElements: {
+   
+    marginLeft: '5%',
+    marginTop: '5%',
+    width: '40%',
+    height: '60%',
+   
+    
+},
 
+textElements: {
+    
+    marginLeft: '5%',
+    width: '70%',
+    height: '100%',
+    
+    
+},
+
+toptextElements: {
+    
+    marginTop: '10%',
+    marginLeft: '10%',
+    width: '70%',
+    height: '60%',
+    
+}
      
 
         

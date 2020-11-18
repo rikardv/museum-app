@@ -1,8 +1,7 @@
 
 import 'react-native-gesture-handler'
 import React from 'react';
-import {  StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar} from 'react-native';
-import FlatButton from './FlatButton.js'
+import {  StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar,TouchableOpacity} from 'react-native';
 
 const ImagesExample = () =>(
     <Image source = {require('../assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
@@ -40,10 +39,40 @@ const HomeScreen = ({navigation}) => {
        
        <View style={styles.buttons}>
        
-       <FlatButton onPress={()=> navigation.navigate('Floors')} text='Besökskarta' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('Exhibitions')} text='Utställningar' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('Events')} text='Evenemang' ></FlatButton>
-       <FlatButton onPress={()=> navigation.navigate('VisitorInfo')} text='Besöksinfo' ></FlatButton>
+       <TouchableOpacity onPress={()=> navigation.navigate('Floors')}>
+  
+              <View style={styles.button}>
+              <Text style={styles.buttonText}>VÅNINGAR</Text>
+              </View>
+
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=> navigation.navigate('Utställningar')}>
+  
+              <View style={styles.button}>
+              <Text style={styles.buttonText}>UTSTÄLLNINGAR</Text>
+              </View>
+
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=> navigation.navigate('Evenemang')}>
+  
+              <View style={styles.button}>
+              <Text style={styles.buttonText}>EVENEMANG</Text>
+              </View>
+
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=> navigation.navigate('Besöksinfo')}>
+  
+  <View style={styles.button}>
+  <Text style={styles.buttonText}>BESÖKSINFO</Text>
+  </View>
+
+</TouchableOpacity>
+
+
+      
       
        
 
@@ -96,13 +125,15 @@ const HomeScreen = ({navigation}) => {
     },
   
     buttons: {
+      
   flex: 4,
   flexDirection: 'column',
   justifyContent: 'space-between',
-  alignItems: 'center',
   
-  width: 400,
-  height: 200
+ 
+  
+  width: '70%',
+ 
   
   
     },
@@ -111,6 +142,34 @@ const HomeScreen = ({navigation}) => {
   
     bottom: {
       flex: 1
+    },
+
+    button: {
+
+      borderRadius: 10,
+        paddingVertical: 14,
+        paddingHorizontal: 10,
+        backgroundColor: '#ffc230',
+        width: '100%',
+        shadowOffset: {width: -1, height: 1},
+        shadowColor: 'rgba(255,255,255,1)',
+        shadowRadius: 10,
+        
+
+       
+    },
+
+    buttonText: {
+
+textAlign: 'center',
+color: 'white',
+fontSize: 17,
+fontWeight: 'bold',
+textShadowOffset: {width: -1, height: 2},
+textShadowColor: 'rgba(0,0,0,1)',
+textShadowRadius: 10,
+
+
     }
   
   
