@@ -47,7 +47,7 @@ const HomeScreen = ({navigation}) => {
 
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Utställningar')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('Exhibitions')}>
   
               <View style={styles.button}>
               <Text style={styles.buttonText}>UTSTÄLLNINGAR</Text>
@@ -55,7 +55,7 @@ const HomeScreen = ({navigation}) => {
 
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Evenemang')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('Events')}>
   
               <View style={styles.button}>
               <Text style={styles.buttonText}>EVENEMANG</Text>
@@ -63,7 +63,7 @@ const HomeScreen = ({navigation}) => {
 
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Besöksinfo')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('VisitorInfo')}>
   
   <View style={styles.button}>
   <Text style={styles.buttonText}>BESÖKSINFO</Text>
