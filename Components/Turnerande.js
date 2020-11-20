@@ -64,7 +64,7 @@ vit: {
   width: '100%',
   opacity: 1,
   fontWeight: 'bold',
-  fontFamily: 'sans-serif',
+  
   textAlign: 'center',
   color: 'white',
  
@@ -79,7 +79,7 @@ vit: {
     width: '100%',
     opacity: 1,
     fontWeight: 'bold',
-    fontFamily: 'sans-serif',
+   
     textAlign: 'center',
     color: 'black'
     

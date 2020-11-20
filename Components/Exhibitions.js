@@ -33,7 +33,7 @@ const Exhibitions = ({navigation}) => {
              <JL />
                <View style={[styles.JL]}/>
                  <Text style={styles.vit}>  
-                   AKTUELLA UTSTÃ„LLNINGAR
+                   AKTUELLA UTSTÄLLNINGAR
                  </Text>
            </View>
            </TouchableOpacity>
@@ -43,7 +43,7 @@ const Exhibitions = ({navigation}) => {
              <Kommande />
                <View style={[styles.Kommande]}/>
                  <Text style={styles.svart}>  
-                   KOMMANDE UTSTÃ„LLNINGAR
+                   KOMMANDE UTSTÄLLNINGAR
                  </Text>
            </View>
            </TouchableOpacity>
@@ -53,7 +53,7 @@ const Exhibitions = ({navigation}) => {
              <Turnerande />
                <View style={[styles.Turnerande]}/>
                  <Text style={styles.vit}>  
-                   TURNERNADE UTSTÃ„LLNINGAR
+                   TURNERNADE UTSTÄLLNINGAR
                  </Text>
            </View>
            </TouchableOpacity>
@@ -73,7 +73,7 @@ const Exhibitions = ({navigation}) => {
               <Tidigare />
                 <View style={[styles.Tidigare]}/>
                   <Text style={styles.vit}>  
-                    TIDIGARE UTSTÃ„LLNINGAR
+                    TIDIGARE UTSTÄLLNINGAR
                   </Text>
            </View>
           </TouchableOpacity>
@@ -95,13 +95,12 @@ const styles = StyleSheet.create({
   
 vit: {
   
-  fontSize: 25,
+  fontSize: 20,
   position: 'absolute',
   bottom: 23,
   width: '100%',
   opacity: 1,
   fontWeight: 'bold',
-  fontFamily: 'sans-serif',
   textAlign: 'center',
   color: 'white',
  
@@ -110,13 +109,12 @@ vit: {
 
   svart: {
   
-    fontSize: 25,
+    fontSize: 20,
     position: 'absolute',
     bottom: 23,
     width: '100%',
     opacity: 1,
     fontWeight: 'bold',
-    fontFamily: 'sans-serif',
     textAlign: 'center',
     color: 'black'
     

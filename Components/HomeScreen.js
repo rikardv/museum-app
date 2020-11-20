@@ -1,15 +1,15 @@
 
 import 'react-native-gesture-handler'
 import React from 'react';
-import {  StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar,TouchableOpacity} from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar,TouchableOpacity} from 'react-native';
 
-const ImagesExample = () =>(
-    <Image source = {require('../assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
-    
-  )
+ 
 
 const HomeScreen = ({navigation}) => {
 
+
+
+  
     return(
         <SafeAreaView style={styles.container}>
 
@@ -28,7 +28,8 @@ const HomeScreen = ({navigation}) => {
 
   
         <View style={styles.header}>
-          <ImagesExample></ImagesExample>
+        <Image source = {require('../assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
+
           
           
         </View>
@@ -36,37 +37,43 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.headerText}>
         <Text style={styles.textheader}>Välkommen!</Text>
         </View>
-       
+        
+        
+     
+
+
        <View style={styles.buttons}>
+
+       <TouchableOpacity onPress={()=> navigation.navigate('Floors')} style={styles.shadow}>
+  
+  <View style={styles.buttonV}>
+  <Text style={styles.buttonTextV}>Tryck här för att börja!</Text>
+  </View>
+
+</TouchableOpacity>
        
-       <TouchableOpacity onPress={()=> navigation.navigate('Floors')}>
+       
+
+      <TouchableOpacity onPress={()=> navigation.navigate('Exhibitions')} style={styles.shadow}>
   
               <View style={styles.button}>
-              <Text style={styles.buttonText}>VÅNINGAR</Text>
+              <Text style={styles.buttonText}>Utställningar</Text>
               </View>
 
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Exhibitions')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('Events')} style={styles.shadow}>
   
               <View style={styles.button}>
-              <Text style={styles.buttonText}>UTSTÄLLNINGAR</Text>
+              <Text style={styles.buttonText}>Evenemang</Text>
               </View>
 
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Events')}>
-  
-              <View style={styles.button}>
-              <Text style={styles.buttonText}>EVENEMANG</Text>
-              </View>
-
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={()=> navigation.navigate('VisitorInfo')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('VisitorInfo')} style={styles.shadow}>
   
   <View style={styles.button}>
-  <Text style={styles.buttonText}>BESÖKSINFO</Text>
+  <Text style={styles.buttonText}>Besöksinfo</Text>
   </View>
 
 </TouchableOpacity>
@@ -129,14 +136,13 @@ const HomeScreen = ({navigation}) => {
   flex: 4,
   flexDirection: 'column',
   justifyContent: 'space-between',
-  
- 
-  
   width: '70%',
  
   
   
     },
+
+   
   
     
   
@@ -146,30 +152,67 @@ const HomeScreen = ({navigation}) => {
 
     button: {
 
-      borderRadius: 10,
-        paddingVertical: 14,
-        paddingHorizontal: 10,
-        backgroundColor: '#ffc230',
-        width: '100%',
-        shadowOffset: {width: -1, height: 1},
-        shadowColor: 'rgba(255,255,255,1)',
-        shadowRadius: 10,
+      borderRadius: 30,
+        paddingVertical: 10,
         
+        backgroundColor: '#252525',
+        width: '100%',
+        borderWidth: 0.5,
+        borderColor: '#ffc230'
+      
 
        
     },
+
+    buttonV: {
+
+      borderRadius: 30,
+        paddingVertical: 20,
+        
+        backgroundColor: '#ffc230',
+        width: '100%',
+        borderWidth: 1,
+        borderColor: '#ffc230'
+      
+
+       
+    },
+   
+    
 
     buttonText: {
 
 textAlign: 'center',
 color: 'white',
-fontSize: 17,
+fontSize: 16,
 fontWeight: 'bold',
 textShadowOffset: {width: -1, height: 2},
-textShadowColor: 'rgba(0,0,0,1)',
-textShadowRadius: 10,
+textShadowColor: 'rgba(0,0,0,0.4)',
+textShadowRadius: 5,
 
 
+    },
+
+    buttonTextV: {
+
+      textAlign: 'center',
+      color: 'white',
+      fontSize: 18,
+      fontWeight: 'bold',
+      textShadowOffset: {width: -1, height: 2},
+      textShadowColor: 'rgba(0,0,0,0.4)',
+      textShadowRadius: 5,
+      
+      
+          },
+
+    shadow: {
+      shadowColor: 'rgba(0,0,0, 0.5)', // IOS
+      shadowOffset: { height: 2, width: 1 }, // IOS
+      shadowOpacity: 1, // IOS
+      shadowRadius: 5, //IOS
+
+      
     }
   
   

@@ -21,6 +21,7 @@ const MAPPING = [
 ]
  
 
+
 const Map = ({navigation}) => {
 
 	
@@ -65,6 +66,8 @@ const Map = ({navigation}) => {
                        cropHeight={Dimensions.get('window').height}
                        imageWidth={6569/16}
                        imageHeight={3761/16}
+                       
+                       
                       
                        
                        >

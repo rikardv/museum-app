@@ -40,21 +40,26 @@ const App = () => {
 
 <Stack.Navigator
 screenOptions={
+
+  
   
   {
-
- 
   
-
   headerStyle: {
     backgroundColor: '#252525',
    
     
   
   },
+
+  
+  headerBackTitleVisible: false,
+
+  headerBackImage: ()=>(<Image source={require('./assets/back.png')} style={{ width: 25, height: 25 }}/>),
+  
   headerTintColor: '#fff',
   headerTitleStyle: {
-    fontWeight: 'bold',
+    
     
   },
 

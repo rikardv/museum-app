@@ -216,13 +216,12 @@ const styles = StyleSheet.create({
   
 vit: {
   
-  fontSize: 25,
+  fontSize: 20,
   position: 'absolute',
   bottom: 23,
   width: '100%',
   opacity: 1,
   fontWeight: 'bold',
-  fontFamily: 'sans-serif',
   textAlign: 'center',
   color: 'white',
  
