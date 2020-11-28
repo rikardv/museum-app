@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Button,Platform, PanRespon
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import ImageMapper from 'react-native-image-mapper';
 import ImageZoom from 'react-native-image-pan-zoom';
+import JobbLabbText from './JobbLabbText';
+import KVtext from './KVtext';
 
 const imageSource = require('../assets/van1.png');
 const MAPPING = [
@@ -10,13 +12,27 @@ const MAPPING = [
     id: '0',
     name: 'First Area Name',
     shape: 'rectangle',
-    width: 50,
-    height: 20,
-    x1: 67,
-    y1: 99,
-    prefill: 'rgba(255, 255, 255, 0.5)',
+    width: 80,
+    height: 30,
+    x1: 64,
+    y1: 92,
+    prefill: 'rgba(255, 255, 255, 0.4)',
     fill: 'rgba(255, 255, 255, 0.8)'
   },
+
+  {
+    id: '1',
+    name: 'Second Area Name',
+    shape: 'rectangle',
+    width: 100,
+    height: 30,
+    x1: 165,
+    y1: 205,
+    prefill: 'rgba(255, 255, 255, 0.4)',
+    fill: 'rgba(255, 255, 255, 0.8)'
+  },
+
+  
  
 ]
  
@@ -24,15 +40,36 @@ const MAPPING = [
 
 const Map = ({navigation}) => {
 
+  
 	
-  const [modalVisible, setModalVisible] = useState(false);
-	
+  const [modalVisible,  setModalVisible, ] = useState(false);
+
+    const [modalVisibleS,  setModalVisibleS, ] = useState(false);
+
+
+  const mapperAreaClickHandler = async(item) => {
+
+    if(item.id == 0){
+     
+      setModalVisible(true);
+      
+    }
+
+    if(item.id == 1){
+     
+      setModalVisibleS(true);
+     
+    }
+  }
+  
+
+  
 	
     return (
 
      
         
-        <View backgroundColor={'#252525'} >
+        <View backgroundColor={'#252525'}  >
 
 <Modal
         animationType="fade"
@@ -45,9 +82,11 @@ const Map = ({navigation}) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
 
-          <Text style={styles.modalText}>Hello World!</Text>
+<ScrollView>
+      <Text style={styles.modalText}> <JobbLabbText></JobbLabbText></Text>
+          </ScrollView>
           <TouchableOpacity
-              style={{ ...styles.openButton, backgroundColor: "#ffc230" }}
+              style={{ ...styles.openButton, backgroundColor: "#252525" }}
               onPressIn={() => {
                 setModalVisible(!modalVisible);
               }}
@@ -55,12 +94,40 @@ const Map = ({navigation}) => {
               <Text style={styles.textStyle}>Dölj</Text>
             </TouchableOpacity>
             
-
+          
            
           </View>
         </View>
       </Modal>
+   
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisibleS}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
 
+<ScrollView>
+      <Text style={styles.modalText}> <KVtext></KVtext> </Text>
+          </ScrollView>
+          <TouchableOpacity
+              style={{ ...styles.openButton, backgroundColor: "#252525" }}
+              onPressIn={() => {
+                setModalVisibleS(!modalVisibleS);
+              }}
+            >
+              <Text style={styles.textStyle}>Dölj</Text>
+            </TouchableOpacity>
+            
+          
+           
+          </View>
+        </View>
+      </Modal>
 
 <ImageZoom cropWidth={Dimensions.get('window').width}
                        cropHeight={Dimensions.get('window').height}
@@ -79,11 +146,12 @@ const Map = ({navigation}) => {
         imgHeight={3761/16}
         imgSource={imageSource}
         imgMap={MAPPING}
-        onPress={() => {
-          setModalVisible(true);
-        }}
+        onPress={
+          (item) => 
+            mapperAreaClickHandler(item)
+        }
         
-        selectedAreaId="my_area_id"
+        
        
       />
 
@@ -109,17 +177,24 @@ const Map = ({navigation}) => {
 const styles = StyleSheet.create({
   centeredView: {
     
+    
     flex: 1,
+    alignSelf: 'center',
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 22,
+    
+    
     
   },
   modalView: {
-    margin: 20,
+    flex: 0.75,
+    margin: 30,
     backgroundColor: "white",
-    borderRadius: 30,
-    padding: 50, 
+    borderRadius: 20,
+  
+   justifyContent: 'center',
+   alignItems: 'center',
+    padding: 20, 
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -130,26 +205,40 @@ const styles = StyleSheet.create({
     elevation: 2
   },
   openButton: {
-    backgroundColor: "#F194FF",
+    
+    
+    width: 200,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+
+   
     borderRadius: 20,
     padding: 10,
-    elevation: 2,
+    
+    
     
   
    
   },
   textStyle: {
+  
     
     color: "white",
     fontWeight: "bold",
     textAlign: "center",
-    width: 50,
+  
+    
+    
     
   },
   modalText: {
-  
-    marginBottom: 15,
-    textAlign: 'center',
+  flex: 10,
+    
+    textAlign: 'left',
+    justifyContent: 'center',
+    margin: 5,
+    
    
   }
 });

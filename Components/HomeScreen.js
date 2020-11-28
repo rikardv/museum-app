@@ -1,9 +1,8 @@
 
 import 'react-native-gesture-handler'
-import React from 'react';
-import { Platform, StyleSheet, Text, View, Image, SafeAreaView, Button, StatusBar,TouchableOpacity} from 'react-native';
+import React, {useRef, useEffect} from 'react';
+import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar,TouchableOpacity} from 'react-native';
 
- 
 
 const HomeScreen = ({navigation}) => {
 
@@ -25,6 +24,9 @@ const HomeScreen = ({navigation}) => {
     networkActivityIndicatorVisible = {true}
 />
 
+<View style={styles.back}>
+
+</View>
 
   
         <View style={styles.header}>
@@ -106,6 +108,25 @@ const HomeScreen = ({navigation}) => {
       justifyContent: 'center',
       
     },
+
+    back: {
+
+      
+      position: 'absolute',
+      
+      width: '100%',
+      height: '100%'
+      
+
+    },
+
+    image: {
+
+      height: '60%',
+      width: '90%',
+      marginTop: '40%',
+
+    },
   
     headerText: {
   
@@ -155,7 +176,7 @@ const HomeScreen = ({navigation}) => {
       borderRadius: 30,
         paddingVertical: 10,
         
-        backgroundColor: '#252525',
+        backgroundColor: '#353535',
         width: '100%',
         borderWidth: 0.5,
         borderColor: '#ffc230'
