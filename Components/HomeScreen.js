@@ -1,245 +1,179 @@
-
-import 'react-native-gesture-handler'
-import React, {useRef, useEffect} from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar,TouchableOpacity} from 'react-native';
-
+import 'react-native-gesture-handler';
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
 
 const HomeScreen = ({navigation}) => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        // dark-content, light-content and default
+        hidden={false}
+        //To hide statusBar
+        backgroundColor="#252525"
+        //Background color of statusBar only works for Android
+        translucent={false}
+        //allowing light, but not detailed shapes
+        networkActivityIndicatorVisible={true}
+      />
 
+      <View style={styles.back}></View>
 
+      <View style={styles.header}>
+        <Image
+          source={require('../assets/logotyp-arbetets-museum.png')}
+          style={{width: 200, height: 200, resizeMode: 'contain'}}
+        />
+      </View>
 
-  
-    return(
-        <SafeAreaView style={styles.container}>
-
-<StatusBar
-    barStyle = "light-content"
-    // dark-content, light-content and default
-    hidden = {false}
-    //To hide statusBar
-    backgroundColor = "#252525"
-    //Background color of statusBar only works for Android
-    translucent = {false}
-    //allowing light, but not detailed shapes
-    networkActivityIndicatorVisible = {true}
-/>
-
-<View style={styles.back}>
-
-</View>
-
-  
-        <View style={styles.header}>
-        <Image source = {require('../assets/logotyp-arbetets-museum.png')} style = {{ width: 200, height: 200, resizeMode: "contain"}}/>
-
-          
-          
-        </View>
-
-        <View style={styles.headerText}>
+      <View style={styles.headerText}>
         <Text style={styles.textheader}>Välkommen!</Text>
-        </View>
-        
-        
-     
+      </View>
 
+      <View style={styles.buttons}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Floors')}
+          style={styles.shadow}>
+          <View style={styles.buttonV}>
+            <Text style={styles.buttonTextV}>Tryck här för att börja!</Text>
+          </View>
+        </TouchableOpacity>
 
-       <View style={styles.buttons}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Exhibitions')}
+          style={styles.shadow}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Utställningar</Text>
+          </View>
+        </TouchableOpacity>
 
-       <TouchableOpacity onPress={()=> navigation.navigate('Floors')} style={styles.shadow}>
-  
-  <View style={styles.buttonV}>
-  <Text style={styles.buttonTextV}>Tryck här för att börja!</Text>
-  </View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Events')}
+          style={styles.shadow}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Evenemang</Text>
+          </View>
+        </TouchableOpacity>
 
-</TouchableOpacity>
-       
-       
+        <TouchableOpacity
+          onPress={() => navigation.navigate('VisitorInfo')}
+          style={styles.shadow}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Besöksinfo</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Exhibitions')} style={styles.shadow}>
-  
-              <View style={styles.button}>
-              <Text style={styles.buttonText}>Utställningar</Text>
-              </View>
+      <View style={styles.bottom}></View>
+    </SafeAreaView>
+  );
+};
 
-      </TouchableOpacity>
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#252525',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 
-      <TouchableOpacity onPress={()=> navigation.navigate('Events')} style={styles.shadow}>
-  
-              <View style={styles.button}>
-              <Text style={styles.buttonText}>Evenemang</Text>
-              </View>
+  back: {
+    position: 'absolute',
 
-      </TouchableOpacity>
+    width: '100%',
+    height: '100%',
+  },
 
-      <TouchableOpacity onPress={()=> navigation.navigate('VisitorInfo')} style={styles.shadow}>
-  
-  <View style={styles.button}>
-  <Text style={styles.buttonText}>Besöksinfo</Text>
-  </View>
+  image: {
+    height: '60%',
+    width: '90%',
+    marginTop: '40%',
+  },
 
-</TouchableOpacity>
+  headerText: {
+    flex: 1,
+  },
 
+  header: {
+    flex: 2.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 250,
+  },
 
-      
-      
-       
+  textheader: {
+    fontFamily: 'System',
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'white',
+  },
 
-         
-         
-       </View>
-            
-             
-             
-           
-          
-             
-             <View style={styles.bottom}></View>
-           </SafeAreaView>
-    )
-  }
+  buttons: {
+    flex: 4,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    width: '70%',
+  },
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'column',
-      backgroundColor: '#252525',
-      alignItems: 'center',
-      justifyContent: 'center',
-      
-    },
+  bottom: {
+    flex: 1,
+  },
 
-    back: {
+  button: {
+    borderRadius: 30,
+    paddingVertical: 10,
 
-      
-      position: 'absolute',
-      
-      width: '100%',
-      height: '100%'
-      
+    backgroundColor: '#353535',
+    width: '100%',
+    borderWidth: 0.5,
+    borderColor: '#ffc230',
+  },
 
-    },
+  buttonV: {
+    borderRadius: 30,
+    paddingVertical: 20,
 
-    image: {
+    backgroundColor: '#ffc230',
+    width: '100%',
+    borderWidth: 1,
+    borderColor: '#ffc230',
+  },
 
-      height: '60%',
-      width: '90%',
-      marginTop: '40%',
+  buttonText: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textShadowOffset: {width: -1, height: 2},
+    textShadowColor: 'rgba(0,0,0,0.4)',
+    textShadowRadius: 5,
+  },
 
-    },
-  
-    headerText: {
-  
-      flex: 1,
-      
-    },
-  
-    header: {
-  
-      flex: 2.5,
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: 250,
-      
-  
-    },
-  
-    textheader: {
-  
-      fontFamily: 'System',
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white'
-    },
-  
-    buttons: {
-      
-  flex: 4,
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  width: '70%',
- 
-  
-  
-    },
+  buttonTextV: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textShadowOffset: {width: -1, height: 2},
+    textShadowColor: 'rgba(0,0,0,0.4)',
+    textShadowRadius: 5,
+  },
 
-   
-  
-    
-  
-    bottom: {
-      flex: 1
-    },
+  shadow: {
+    shadowColor: 'rgba(0,0,0, 0.5)', // IOS
+    shadowOffset: {height: 2, width: 1}, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 5, //IOS
+  },
+});
 
-    button: {
-
-      borderRadius: 30,
-        paddingVertical: 10,
-        
-        backgroundColor: '#353535',
-        width: '100%',
-        borderWidth: 0.5,
-        borderColor: '#ffc230'
-      
-
-       
-    },
-
-    buttonV: {
-
-      borderRadius: 30,
-        paddingVertical: 20,
-        
-        backgroundColor: '#ffc230',
-        width: '100%',
-        borderWidth: 1,
-        borderColor: '#ffc230'
-      
-
-       
-    },
-   
-    
-
-    buttonText: {
-
-textAlign: 'center',
-color: 'white',
-fontSize: 16,
-fontWeight: 'bold',
-textShadowOffset: {width: -1, height: 2},
-textShadowColor: 'rgba(0,0,0,0.4)',
-textShadowRadius: 5,
-
-
-    },
-
-    buttonTextV: {
-
-      textAlign: 'center',
-      color: 'white',
-      fontSize: 18,
-      fontWeight: 'bold',
-      textShadowOffset: {width: -1, height: 2},
-      textShadowColor: 'rgba(0,0,0,0.4)',
-      textShadowRadius: 5,
-      
-      
-          },
-
-    shadow: {
-      shadowColor: 'rgba(0,0,0, 0.5)', // IOS
-      shadowOffset: { height: 2, width: 1 }, // IOS
-      shadowOpacity: 1, // IOS
-      shadowRadius: 5, //IOS
-
-      
-    }
-  
-  
-  
-  });
-
-  export default HomeScreen
-
-  
+export default HomeScreen;
