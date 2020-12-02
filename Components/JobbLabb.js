@@ -132,7 +132,7 @@ const JobbLabb = ({navigation}) => {
   return (
     <View style={styles.bgc}>
       <ScrollView>
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('VadskulleEwk')}>
           <View style={styles.container}>
             <EWK />
             <View style={[styles.Text]} />
@@ -140,7 +140,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('EnOvanligDag')}>
           <View style={styles.container}>
             <Vardag />
             <View style={[styles.Text]} />
@@ -148,15 +148,15 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+       {/*} <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
           <View style={styles.container}>
             <Penna />
             <View style={[styles.Text]} />
             <Text style={styles.vit}>MED PENNAN GENOM GLASTAKET</Text>
           </View>
-        </TouchableOpacity>
+  </TouchableOpacity>{*/}
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Fotosalong2020')}>
           <View style={styles.container}>
             <Fotosalong />
             <View style={[styles.Text]} />
@@ -164,7 +164,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('LillaArbetet')}>
           <View style={styles.container}>
             <LillaArbetet />
             <View style={[styles.Text]} />
@@ -172,7 +172,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('JobbLabbFaktiskt')}>
           <View style={styles.container}>
             <JL />
             <View style={[styles.Text]} />
@@ -180,7 +180,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('HejRobot')}>
           <View style={styles.container}>
             <Robot />
             <View style={[styles.Text]} />
@@ -188,7 +188,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('BetterShelter')}>
           <View style={styles.container}>
             <Shelter />
             <View style={[styles.Text]} />
@@ -196,7 +196,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('FangaEnergin')}>
           <View style={styles.container}>
             <Energi />
             <View style={[styles.Text]} />
@@ -212,7 +212,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('HistorienOmAlva')}>
           <View style={styles.container}>
             <Alva />
             <View style={[styles.Text]} />
@@ -220,7 +220,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('KrisOchVision')}>
           <View style={styles.container}>
             <Kris />
             <View style={[styles.Text]} />
@@ -228,7 +228,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Framtidsland')}>
           <View style={styles.container}>
             <Framtidsland />
             <View style={[styles.Text]} />

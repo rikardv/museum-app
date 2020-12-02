@@ -131,11 +131,11 @@ const MapFifth = ({navigation}) => {
       <ImageZoom
         cropWidth={Dimensions.get('window').width}
         cropHeight={Dimensions.get('window').height}
-        imageWidth={1691 / 4}
-        imageHeight={1022 / 4}>
+        imageWidth={1691 / 6}
+        imageHeight={1022 / 6}>
         <ImageMapper
-          imgWidth={1691 / 4}
-          imgHeight={1022 / 4}
+          imgWidth={1691 / 6}
+          imgHeight={1022 / 6}
           imgSource={imageSource}
           imgMap={MAPPING}
           onPress={(item) => mapperAreaClickHandler(item)}

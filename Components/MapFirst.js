@@ -134,8 +134,8 @@ const MapFirst = ({navigation}) => {
         imageWidth={1691 / 4}
         imageHeight={1022 / 4}>
         <ImageMapper
-          imgWidth={1691 / 4}
-          imgHeight={1022 / 4}
+          imgWidth={1691}
+          imgHeight={1022}
           imgSource={imageSource}
           imgMap={MAPPING}
           onPress={(item) => mapperAreaClickHandler(item)}
