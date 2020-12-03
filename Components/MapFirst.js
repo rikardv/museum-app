@@ -17,9 +17,15 @@ const imageSource = require('../assets/kartor/Vaning1.png');
 const FirstText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      LILLA ARBETETS
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Text
+        {'\n'} {'\n'}Äntligen! Nu är Lilla Arbetets öppet igen, med ett par
+        förändringar och en och annan nyhet 😉 Det är många som vill besöka
+        Lilla Arbetets, särskilt på helger. Jättekul tycker vi! För att det inte
+        ska bli för trångt har vi infört ett system med nummerbrickor. Brickorna
+        hämtar du i receptionen. I Lilla Arbetets har vi satt en gräns på max en
+        vuxen per barn, för att fler barn ska kunna ta del av utställningen.
+        Nytt är också att förskolegrupper nu behöver boka in sig...
       </Text>
     </Text>
   );
@@ -42,7 +48,7 @@ const MAPPING = [
     shape: 'rectangle',
     width: 80,
     height: 30,
-    x1: 64,
+    x1: 100,
     y1: 92,
     prefill: 'rgba(255, 255, 255, 0.4)',
     fill: 'rgba(255, 255, 255, 0.8)',
@@ -52,10 +58,10 @@ const MAPPING = [
     id: '1',
     name: 'Second Area Name',
     shape: 'rectangle',
-    width: 100,
+    width: 70,
     height: 30,
-    x1: 165,
-    y1: 205,
+    x1: 110,
+    y1: 135,
     prefill: 'rgba(255, 255, 255, 0.4)',
     fill: 'rgba(255, 255, 255, 0.8)',
   },
@@ -92,13 +98,23 @@ const MapFirst = ({navigation}) => {
                 <FirstText></FirstText>
               </Text>
             </ScrollView>
-            <TouchableOpacity
-              style={{...styles.openButton, backgroundColor: '#252525'}}
-              onPressIn={() => {
-                setModalVisible(!modalVisible);
-              }}>
-              <Text style={styles.textStyle}>Dölj</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('LillaArbetet'),
+                    setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Modal>
@@ -134,8 +150,8 @@ const MapFirst = ({navigation}) => {
         imageWidth={1691 / 4}
         imageHeight={1022 / 4}>
         <ImageMapper
-          imgWidth={1691}
-          imgHeight={1022}
+          imgWidth={1691 / 4}
+          imgHeight={1022 / 4}
           imgSource={imageSource}
           imgMap={MAPPING}
           onPress={(item) => mapperAreaClickHandler(item)}
@@ -182,11 +198,11 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   openButton: {
-    width: 200,
+    width: 100,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-
+    margin: 10,
     borderRadius: 20,
     padding: 10,
   },

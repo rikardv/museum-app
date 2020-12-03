@@ -8,7 +8,9 @@ const Floors = ({navigation}) => {
       <View style={styles.dummy}></View>
 
       <View style={styles.floors}>
-        <TouchableOpacity style={styles.opa}>
+        <TouchableOpacity
+          style={styles.opa}
+          onPress={() => navigation.navigate('MapSeventh')}>
           <ImageBackground
             style={styles.image}
             resizeMode={'stretch'}
@@ -19,14 +21,14 @@ const Floors = ({navigation}) => {
       </View>
 
       <View style={styles.floors}>
-        <TouchableOpacity style={styles.opa}>
+        <View style={styles.opa}>
           <ImageBackground
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning6.6.png')}>
-            <Text style={styles.text}>RESTAURANG</Text>
+            <Text style={styles.nonAvailabletext}>RESTAURANG</Text>
           </ImageBackground>
-        </TouchableOpacity>
+        </View>
       </View>
 
       <View style={styles.floors}>
@@ -45,14 +47,14 @@ const Floors = ({navigation}) => {
       </View>
 
       <View style={styles.floors}>
-        <TouchableOpacity style={styles.opa}>
+        <View style={styles.opa}>
           <ImageBackground
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning4.4.png')}>
-            <Text style={styles.text}>KONTOR</Text>
+            <Text style={styles.nonAvailabletext}>KONTOR</Text>
           </ImageBackground>
-        </TouchableOpacity>
+        </View>
       </View>
 
       <View style={styles.floors}>
@@ -144,6 +146,15 @@ const styles = StyleSheet.create({
 
   text: {
     color: 'white',
+    fontSize: 17,
+    fontWeight: 'bold',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowColor: 'rgba(0,0,0,0.75)',
+    textShadowRadius: 4,
+  },
+
+  nonAvailabletext: {
+    color: 'rgba(255,255,255,0.7)',
     fontSize: 17,
     fontWeight: 'bold',
     textShadowOffset: {width: -1, height: 1},

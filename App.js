@@ -42,6 +42,7 @@ import HistorienOmAlva from './Components/AktuellaUtstallningar/HistorienOmAlva.
 import JobbLabbFaktiskt from './Components/AktuellaUtstallningar/JobbLabbFaktiskt.js';
 import KrisOchVision from './Components/AktuellaUtstallningar/KrisOchVision.js';
 import LillaArbetet from './Components/AktuellaUtstallningar/LillaArbetet.js';
+import MapSeventh from './Components/MapSeventh.js';
 
 const Stack = createStackNavigator();
 const App = () => {
@@ -112,6 +113,12 @@ const App = () => {
           name="MapFifth"
           component={MapFifth}
           options={{title: 'Våning 5'}}
+        />
+
+        <Stack.Screen
+          name="MapSeventh"
+          component={MapSeventh}
+          options={{title: 'Våning 7'}}
         />
 
         <Stack.Screen

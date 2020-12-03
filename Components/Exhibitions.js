@@ -14,7 +14,12 @@ const JL = () => (
       uri:
         'https://www.arbetetsmuseum.se/wp-content/uploads/2019/09/jobblabb-insta-1080x1080px-1-760x760.jpg',
     }}
-    style={{width: '100%', height: 300, borderRadius: 10, resizeMode: 'cover'}}
+    style={{
+      width: '100%',
+      height: 250,
+      borderRadius: 10,
+      resizeMode: 'cover',
+    }}
   />
 );
 const Kommande = () => (
@@ -23,7 +28,7 @@ const Kommande = () => (
       uri:
         'https://www.arbetetsmuseum.se/wp-content/uploads/2014/12/kommande-utstallningar-760x760.jpg',
     }}
-    style={{width: '100%', height: 300, borderRadius: 10, resizeMode: 'cover'}}
+    style={{width: '100%', height: 250, borderRadius: 10, resizeMode: 'cover'}}
   />
 );
 const Turnerande = () => (
@@ -56,7 +61,7 @@ const Tidigare = () => (
 
 const Exhibitions = ({navigation}) => {
   return (
-    <View style={{backgroundColor: '#252525'}}>
+    <View style={styles.background}>
       <ScrollView>
         <TouchableOpacity onPress={() => navigation.navigate('JobbLabb')}>
           <View style={styles.container}>
@@ -73,42 +78,23 @@ const Exhibitions = ({navigation}) => {
             <Text style={styles.svart}>KOMMANDE UTSTÄLLNINGAR</Text>
           </View>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('Turnerande')}>
-          <View style={styles.container}>
-            <Turnerande />
-            <View style={[styles.Turnerande]} />
-            <Text style={styles.vit}>TURNERNADE UTSTÄLLNINGAR</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
-          <View style={styles.container}>
-            <EWK />
-            <View style={[styles.EWK]} />
-            <Text style={styles.svart}>EWK-MUSEET</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
-          <View style={styles.container}>
-            <Tidigare />
-            <View style={[styles.Tidigare]} />
-            <Text style={styles.vit}>TIDIGARE UTSTÄLLNINGAR</Text>
-          </View>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#252525',
+  },
   container: {
+    flex: 1,
     margin: 7,
     flexDirection: 'column',
     position: 'relative',
     textAlign: 'center',
-    flex: 1,
   },
 
   vit: {

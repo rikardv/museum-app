@@ -17,9 +17,16 @@ const imageSource = require('../assets/kartor/Vaning5.png');
 const FirstText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      HEJ ROBOT!
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Text
+        {'\n'} {'\n'}Sociala robotar verkar vara här för att stanna – i hemmet,
+        i staden och på arbetsplatserna. Men robotarna blir vad vi gör dem till.
+        Vilken roll vill vi att sociala robotar ska spela i framtidens samhälle?
+        Hej robot! handlar om den teknik som är tänkt att kommunicera med oss i
+        våra vardagliga miljöer. Med utställningen vill vi förklara sammanhangen
+        kring sociala robotar och väcka funderingar kring deras roll i
+        samhället. I utställningen möter du bland annat den sociala roboten
+        Furhat (bilden) som är utvecklad i Sv...
       </Text>
     </Text>
   );
@@ -28,9 +35,34 @@ const FirstText = () => {
 const SecondText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      KRIS & VISION – VÅGA ÄLSKA NORRKÖPING
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Text
+        {'\n'} {'\n'}Kris & vision – Våga älska Norrköping! är en utställning om
+        hur Norrköping blev den stad den är idag. Norrköpings stad har genom
+        historien upplevt både stora framgångar och svåra motgångar. Dessa upp-
+        och nedgångar har präglat Norrköping och dess befolkning. Ur kriserna
+        har man format nya visioner, men visionära projekt har också förvandlats
+        till kriser. För att förstå vad staden är idag behöver man förstå dess
+        historia. Vad kan vi lära oss av de kriser och visioner som varit och
+        hur kommer de att se ut ...
+      </Text>
+    </Text>
+  );
+};
+
+const ThirdText = () => {
+  return (
+    <Text style={styles.baseText}>
+      FRAMTID
+      <Text style={styles.innerText}>
+        {'\n'} {'\n'}Kris & vision – Våga älska Norrköping! är en utställning om
+        hur Norrköping blev den stad den är idag. Norrköpings stad har genom
+        historien upplevt både stora framgångar och svåra motgångar. Dessa upp-
+        och nedgångar har präglat Norrköping och dess befolkning. Ur kriserna
+        har man format nya visioner, men visionära projekt har också förvandlats
+        till kriser. För att förstå vad staden är idag behöver man förstå dess
+        historia. Vad kan vi lära oss av de kriser och visioner som varit och
+        hur kommer de att se ut ...
       </Text>
     </Text>
   );
@@ -39,23 +71,36 @@ const MAPPING = [
   {
     id: '0',
     name: 'First Area Name',
-    shape: 'rectangle',
+    shape: 'circle',
     width: 80,
     height: 30,
-    x1: 64,
-    y1: 92,
-    prefill: 'rgba(255, 255, 255, 0.4)',
-    fill: 'rgba(255, 255, 255, 0.8)',
+    radius: 50,
+    x1: 110,
+    y1: 40,
+    prefill: 'rgba(255, 255, 255, 0.3)',
+    fill: 'rgba(255, 255, 255, 0.4)',
   },
 
   {
     id: '1',
     name: 'Second Area Name',
     shape: 'rectangle',
+    width: 60,
+    height: 30,
+    x1: 100,
+    y1: 110,
+    prefill: 'rgba(255, 255, 255, 0.4)',
+    fill: 'rgba(255, 255, 255, 0.8)',
+  },
+
+  {
+    id: '2',
+    name: 'Third Area Name',
+    shape: 'rectangle',
     width: 100,
     height: 30,
     x1: 165,
-    y1: 205,
+    y1: 120,
     prefill: 'rgba(255, 255, 255, 0.4)',
     fill: 'rgba(255, 255, 255, 0.8)',
   },
@@ -66,6 +111,8 @@ const MapFifth = ({navigation}) => {
 
   const [modalVisibleS, setModalVisibleS] = useState(false);
 
+  const [modalVisibleT, setModalVisibleT] = useState(false);
+
   const mapperAreaClickHandler = async (item) => {
     if (item.id == 0) {
       setModalVisible(true);
@@ -73,6 +120,10 @@ const MapFifth = ({navigation}) => {
 
     if (item.id == 1) {
       setModalVisibleS(true);
+    }
+
+    if (item.id == 2) {
+      setModalVisibleT(true);
     }
   };
 
@@ -92,13 +143,23 @@ const MapFifth = ({navigation}) => {
                 <FirstText></FirstText>
               </Text>
             </ScrollView>
-            <TouchableOpacity
-              style={{...styles.openButton, backgroundColor: '#252525'}}
-              onPressIn={() => {
-                setModalVisible(!modalVisible);
-              }}>
-              <Text style={styles.textStyle}>Dölj</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('HejRobot'),
+                    setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Modal>
@@ -114,16 +175,61 @@ const MapFifth = ({navigation}) => {
           <View style={styles.modalView}>
             <ScrollView>
               <Text style={styles.modalText}>
+                <ThirdText></ThirdText>
+              </Text>
+            </ScrollView>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisibleS(!modalVisibleS);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('Framtidsland'),
+                    setModalVisibleS(!modalVisibleS);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisibleT}
+        onRequestClose={() => {
+          Alert.alert('Rutan stängdes.');
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <ScrollView>
+              <Text style={styles.modalText}>
                 <SecondText></SecondText>
               </Text>
             </ScrollView>
-            <TouchableOpacity
-              style={{...styles.openButton, backgroundColor: '#252525'}}
-              onPressIn={() => {
-                setModalVisibleS(!modalVisibleS);
-              }}>
-              <Text style={styles.textStyle}>Dölj</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisibleT(!modalVisibleT);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('KrisOchVision'),
+                    setModalVisibleT(!modalVisibleT);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Modal>
@@ -182,11 +288,11 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   openButton: {
-    width: 200,
+    width: 100,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-
+    margin: 10,
     borderRadius: 20,
     padding: 10,
   },

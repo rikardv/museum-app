@@ -13,17 +13,18 @@ import {ScrollView} from 'react-native-gesture-handler';
 import ImageMapper from 'react-native-image-mapper';
 import ImageZoom from 'react-native-image-pan-zoom';
 
-const imageSource = require('../assets/kartor/Vaning3.png');
+const imageSource = require('../assets/kartor/Vaning7.png');
 const FirstText = () => {
   return (
     <Text style={styles.baseText}>
-      VAD SKULLE EWK SAGT?
+      DOKUMENTÄRFOTOSALONG 2020: KAOS
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Den 23 september 2019 höll Greta Tunberg ett tal inför alla
-        världens ledare under FN:s klimattoppmöte i New York. Greta, som sedan
-        hösten 2018 valt att skolka från skolan och sätta sig utanför Sveriges
-        riksdag, med sin handskrivna skylt om skolstrejk för klimatet. I dag
-        upprepar Sir David Attenborough samma sak, med en 93-årings patos, i ...
+        {'\n'} {'\n'}Lördag 5 september slår vi upp dörrarna för
+        Dokumentärfotosalong 2020 på Arbetets museum! Bland 91 sökande från hela
+        Sverige har juryn nu valt ut 43 fotografer som ställer ut sina bilder på
+        temat ”kaos” i höstens salong. Temat valdes ut redan hösten 2019, då vi
+        var lyckligt ovetande om coronakrisen. Livet blir inte alltid som
+        väntat…
       </Text>
     </Text>
   );
@@ -32,7 +33,7 @@ const FirstText = () => {
 const SecondText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      Bio
       <Text style={styles.innerText}>
         {'\n'} {'\n'}Text
       </Text>
@@ -65,7 +66,7 @@ const MAPPING = [
   },
 ];
 
-const MapThird = ({navigation}) => {
+const MapSeventh = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const [modalVisibleS, setModalVisibleS] = useState(false);
@@ -107,7 +108,7 @@ const MapThird = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('VadskulleEwk'),
+                  navigation.navigate('Fotosalong2020'),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>
@@ -228,4 +229,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MapThird;
+export default MapSeventh;

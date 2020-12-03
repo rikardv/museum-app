@@ -17,9 +17,13 @@ const imageSource = require('../assets/kartor/Vaning2.png');
 const FirstText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      Välkommen till Jobblabb – ett färgsprakande upptäckarlabb med fokus på
+      arbetslivet.
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Text
+        {'\n'} {'\n'}I Jobblabbs entré stämplar du in till spännande utmaningar.
+        Labbet är format som en stad och på olika platser får du uppdrag och
+        utmanas att använda olika superkrafter för att lösa uppgifterna. Genom
+        att prova olika aktiviteter i utställningen får du syn p...
       </Text>
     </Text>
   );
@@ -28,9 +32,15 @@ const FirstText = () => {
 const SecondText = () => {
   return (
     <Text style={styles.baseText}>
-      Rubrik
+      HELGKUL I KREATIVA VERKSTADEN
       <Text style={styles.innerText}>
-        {'\n'} {'\n'}Text
+        {'\n'} {'\n'}
+        Till Kreativa verkstaden är alla välkomna, stora som små som vill skapa
+        tillsammans med oss. Vi har olika teman under året, ofta med anknytning
+        till någon aktuell utställning. Museets pedagoger ﬁnns på plats för att
+        hjälpa till och inspirera. Endast fantasin sätter gränser! Öppet
+        lördagar och söndagar, kl 12-16. För alla åldrar. Gratis. Arrangeras i
+        samarbete med Folkuniversitetet.
       </Text>
     </Text>
   );
@@ -92,13 +102,23 @@ const MapSecond = ({navigation}) => {
                 <FirstText></FirstText>
               </Text>
             </ScrollView>
-            <TouchableOpacity
-              style={{...styles.openButton, backgroundColor: '#252525'}}
-              onPressIn={() => {
-                setModalVisible(!modalVisible);
-              }}>
-              <Text style={styles.textStyle}>Dölj</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('JobbLabbFaktiskt'),
+                    setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Modal>
@@ -117,13 +137,23 @@ const MapSecond = ({navigation}) => {
                 <SecondText></SecondText>
               </Text>
             </ScrollView>
-            <TouchableOpacity
-              style={{...styles.openButton, backgroundColor: '#252525'}}
-              onPressIn={() => {
-                setModalVisibleS(!modalVisibleS);
-              }}>
-              <Text style={styles.textStyle}>Dölj</Text>
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#252525'}}
+                onPressIn={() => {
+                  setModalVisibleS(!modalVisibleS);
+                }}>
+                <Text style={styles.textStyle}>Dölj</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{...styles.openButton, backgroundColor: '#ffc230'}}
+                onPressIn={() => {
+                  navigation.navigate('JobbLabbFaktiskt'),
+                    setModalVisibleS(!modalVisibleS);
+                }}>
+                <Text style={styles.textStyle}>Läs mer</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Modal>
@@ -182,11 +212,11 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   openButton: {
-    width: 200,
+    width: 100,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-
+    margin: 10,
     borderRadius: 20,
     padding: 10,
   },
