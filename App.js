@@ -43,6 +43,8 @@ import JobbLabbFaktiskt from './Components/AktuellaUtstallningar/JobbLabbFaktisk
 import KrisOchVision from './Components/AktuellaUtstallningar/KrisOchVision.js';
 import LillaArbetet from './Components/AktuellaUtstallningar/LillaArbetet.js';
 import MapSeventh from './Components/MapSeventh.js';
+import Aktuella from './Components/Aktuella.js';
+import ExhibitInfo from './Components/ExhibitInfo';
 
 const Stack = createStackNavigator();
 const App = () => {
@@ -77,9 +79,19 @@ const App = () => {
           options={{title: 'Välj en våning nedan'}}
         />
         <Stack.Screen
+          name="ExhibitInfo"
+          component={ExhibitInfo}
+          options={{title: 'Information'}}
+        />
+        <Stack.Screen
           name="Exhibitions"
           component={Exhibitions}
           options={{title: 'Utställningar'}}
+        />
+        <Stack.Screen
+          name="Aktuella"
+          component={Aktuella}
+          options={{title: 'Aktuella Utställningar'}}
         />
         <Stack.Screen
           name="Events"

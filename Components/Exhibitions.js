@@ -63,7 +63,7 @@ const Exhibitions = ({navigation}) => {
   return (
     <View style={styles.background}>
       <ScrollView>
-        <TouchableOpacity onPress={() => navigation.navigate('JobbLabb')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Aktuella')}>
           <View style={styles.container}>
             <JL />
             <View style={[styles.JL]} />

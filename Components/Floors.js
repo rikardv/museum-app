@@ -15,7 +15,14 @@ const Floors = ({navigation}) => {
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning7.7.png')}>
-            <Text style={styles.text}>FOTOSALONG</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.text}>FOTOSALONG</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnr}>7</Text>
+              </View>
+            </View>
           </ImageBackground>
         </TouchableOpacity>
       </View>
@@ -23,10 +30,17 @@ const Floors = ({navigation}) => {
       <View style={styles.floors}>
         <View style={styles.opa}>
           <ImageBackground
-            style={styles.image}
+            style={styles.nonAvailableimage}
             resizeMode={'stretch'}
-            source={require('../assets/vaning/Vaning6.6.png')}>
-            <Text style={styles.nonAvailabletext}>RESTAURANG</Text>
+            source={require('../assets/vaning/Vaning4.4.png')}>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.nonAvailabletext}>RESTAURANG</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnrblack}>6</Text>
+              </View>
+            </View>
           </ImageBackground>
         </View>
       </View>
@@ -39,9 +53,16 @@ const Floors = ({navigation}) => {
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning5.5.png')}>
-            <Text style={styles.text}>HEJ ROBOT</Text>
-            <Text style={styles.text}>FRAMTIDSLAND</Text>
-            <Text style={styles.text}>KRIS OCH VISION</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.text}>HEJ ROBOT</Text>
+                <Text style={styles.text}>FRAMTIDSLAND</Text>
+                <Text style={styles.text}>KRIS OCH VISION</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnr}>5</Text>
+              </View>
+            </View>
           </ImageBackground>
         </TouchableOpacity>
       </View>
@@ -49,10 +70,17 @@ const Floors = ({navigation}) => {
       <View style={styles.floors}>
         <View style={styles.opa}>
           <ImageBackground
-            style={styles.image}
+            style={styles.nonAvailableimage}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning4.4.png')}>
-            <Text style={styles.nonAvailabletext}>KONTOR</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.nonAvailabletext}>KONTOR</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnrblack}>4</Text>
+              </View>
+            </View>
           </ImageBackground>
         </View>
       </View>
@@ -65,7 +93,14 @@ const Floors = ({navigation}) => {
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning3.3.png')}>
-            <Text style={styles.text}>EWK-MUSÉET</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.text}>EWK-MUSÉET</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnr}>3</Text>
+              </View>
+            </View>
           </ImageBackground>
         </TouchableOpacity>
       </View>
@@ -78,9 +113,16 @@ const Floors = ({navigation}) => {
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning2.2.png')}>
-            <Text style={styles.text}>RECEPTION</Text>
-            <Text style={styles.text}>KREATIVA VERKSTADEN</Text>
-            <Text style={styles.text}>JOBBLABB</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.text}>RECEPTION</Text>
+                <Text style={styles.text}>KREATIVA VERKSTADEN</Text>
+                <Text style={styles.text}>JOBBLABB</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnr}>2</Text>
+              </View>
+            </View>
           </ImageBackground>
         </TouchableOpacity>
       </View>
@@ -93,9 +135,16 @@ const Floors = ({navigation}) => {
             style={styles.image}
             resizeMode={'stretch'}
             source={require('../assets/vaning/Vaning1.1.png')}>
-            <Text style={styles.text}>LILLA ARBETETS</Text>
-            <Text style={styles.text}>MAGASINET</Text>
-            <Text style={styles.text}>MATSÄCKSSRUM</Text>
+            <View style={styles.line}>
+              <View style={styles.floortext}>
+                <Text style={styles.text}>LILLA ARBETETS</Text>
+                <Text style={styles.text}>MAGASINET</Text>
+                <Text style={styles.text}>MATSÄCKSRUM</Text>
+              </View>
+              <View style={styles.margin}>
+                <Text style={styles.textnr}>1</Text>
+              </View>
+            </View>
           </ImageBackground>
         </TouchableOpacity>
       </View>
@@ -111,7 +160,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
   },
-
+  line: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   opa: {
     //Röd
 
@@ -144,21 +196,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  nonAvailableimage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+
+    resizeMode: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   text: {
     color: 'white',
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 'bold',
     textShadowOffset: {width: -1, height: 1},
     textShadowColor: 'rgba(0,0,0,0.75)',
     textShadowRadius: 4,
   },
 
-  nonAvailabletext: {
-    color: 'rgba(255,255,255,0.7)',
-    fontSize: 17,
+  textnr: {
+    color: 'white',
+    fontSize: 36,
     fontWeight: 'bold',
     textShadowOffset: {width: -1, height: 1},
     textShadowColor: 'rgba(0,0,0,0.75)',
+    textShadowRadius: 4,
+  },
+
+  textnrblack: {
+    color: 'black',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowColor: 'rgba(255,255,255,0.75)',
+    textShadowRadius: 4,
+  },
+  nonAvailabletext: {
+    color: 'black',
+    fontSize: 14,
+    fontWeight: 'bold',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowColor: 'rgba(255,255,255,0.75)',
     textShadowRadius: 4,
   },
 
@@ -172,14 +251,12 @@ const styles = StyleSheet.create({
   },
 
   singletextElements: {
-    marginLeft: '5%',
     marginTop: '5%',
     width: '40%',
     height: '60%',
   },
 
   textElements: {
-    marginLeft: '5%',
     width: '70%',
     height: '100%',
   },
@@ -189,6 +266,17 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     width: '70%',
     height: '60%',
+  },
+
+  floortext: {
+    height: '100%',
+    width: '50%',
+    marginLeft: '5%',
+    justifyContent: 'center',
+  },
+
+  margin: {
+    marginLeft: '10%',
   },
 });
 

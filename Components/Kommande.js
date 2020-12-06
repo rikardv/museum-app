@@ -1,89 +1,89 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, View, Image, SafeAreaView, Button,ScrollView, ImageBackground} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  Button,
+  ScrollView,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
+import ExhibitData from './ExhibitData.js';
 
-const Nina = () =>(
-    <Image source = {{uri: 'https://www.arbetetsmuseum.se/wp-content/uploads/2020/11/AM_NinaHemmingsson_webbsida_1200x771px-760x760.jpg'}} style = {{ width: '100%', height: 300, borderRadius: 10, resizeMode: "cover"}}/>
+function EventButton(props) {
+  return (
+    <View style={styles.item}>
+      <TouchableOpacity onPress={props.onPress}>
+        <View style={{border: 5, borderRadius: 10}}>
+          <ImageBackground source={props.img} style={styles.img}>
+            <Text style={styles.overlay}>{props.title}</Text>
+          </ImageBackground>
+        </View>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
-  )
-  
-  
-  const Kommande = ({navigation}) => {
-
-    return (
-
-        <View style = {{backgroundColor: '#252525'}}>
-            <ScrollView>
-                <TouchableOpacity  onPress={()=> navigation.navigate('JobbLabb')}>
-                <View style={styles.container}>
-                    <Nina />
-                    <View style={[styles.text]}/>
-                        <Text style={styles.vit}>  
-                        AKTUELLA UTSTÄLLNINGAR
-                        </Text>
-                </View>
-                </TouchableOpacity>
-            </ScrollView>
-           </View>
-    )
-  }      
+const Kommande = ({navigation}) => {
+  return (
+    <View style={styles.container}>
+      <ScrollView>
+        <EventButton
+          onPress={() => navigation.navigate('ExhibitInfo', {exhibitID: 3})}
+          title={'En ovanlig vardag'}
+          img={require('../assets/ovanlig.jpg')}
+        />
+      </ScrollView>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-     margin: 7,
-      flexDirection: 'column',
-      position: 'relative',
-      textAlign: 'center',
-      flex: 1,
-
-    },
-    bgc: {
-      backgroundColor:  '#252525',
-      
-    },
-  
-vit: {
-  
-  fontSize: 25,
-  position: 'absolute',
-  bottom: 23,
-  width: '100%',
-  opacity: 1,
-  fontWeight: 'bold',
-  textAlign: 'center',
-  color: 'white',
- 
-  },
- 
-
-  svart: {
-  
-    fontSize: 25,
-    position: 'absolute',
-    bottom: 23,
-    width: '100%',
-    opacity: 1,
-    fontWeight: 'bold',
-
+  container: {
+    flexDirection: 'column',
+    position: 'relative',
     textAlign: 'center',
-    color: 'black'
-    
-    },
- 
-    text: {
-      flex: 1,
-    position: 'absolute',
+    flex: 1,
+    backgroundColor: '#252525',
+    height: '100%',
+  },
+
+  item: {
+    flex: 1,
     backgroundColor: 'black',
     opacity: 0.8,
-    width: '100%',
+    width: '98%',
+    margin: '1%',
+    height: 200,
     bottom: 0,
-    height: 80,
+    marginBottom: '8%',
     borderRadius: 7,
-    },
+  },
 
+  overlay: {
+    color: '#ffffff',
+    fontSize: 25,
+    backgroundColor: '#000000a0',
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'sans-serif',
+    height: '30%',
+    bottom: 0,
+    textAlignVertical: 'center',
+  },
 
+  img: {
+    overflow: 'hidden',
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
+    resizeMode: 'cover',
+    justifyContent: 'flex-end',
+  },
+});
 
-      
-  
-  });
-
-export default Kommande
+export default Kommande;

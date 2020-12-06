@@ -27,16 +27,19 @@ function EventButton(props) {
   );
 }
 
-const Events = ({navigation}) => {
+const Aktuella = ({navigation}) => {
+  const listItems = ExhibitData.map((d) => (
+    <EventButton
+      onPress={() => navigation.navigate('ExhibitInfo', {exhibitID: d.id})}
+      key={d.id}
+      title={d.title}
+      img={d.img}
+    />
+  ));
+
   return (
     <View style={styles.container}>
-      <ScrollView>
-        <EventButton
-          onPress={() => navigation.navigate('ExhibitInfo', {exhibitID: 9})}
-          title={'Kreativa Verkstaden'}
-          img={require('../assets/kreativa.jpg')}
-        />
-      </ScrollView>
+      <ScrollView>{listItems}</ScrollView>
     </View>
   );
 };
@@ -86,4 +89,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Events;
+export default Aktuella;

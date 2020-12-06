@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 
 const HomeScreen = ({navigation}) => {
@@ -24,7 +25,15 @@ const HomeScreen = ({navigation}) => {
         //allowing light, but not detailed shapes
         networkActivityIndicatorVisible={true}
       />
-
+      <ImageBackground
+        source={require('../assets/framsida.png')}
+        style={{
+          width: 200,
+          height: 500,
+          position: 'absolute',
+          alignSelf: 'flex-start',
+          bottom: -28,
+        }}></ImageBackground>
       <View style={styles.back}></View>
 
       <View style={styles.header}>
