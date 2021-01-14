@@ -11,8 +11,7 @@ import {
 const JL = () => (
   <Image
     source={{
-      uri:
-        'https://www.arbetetsmuseum.se/wp-content/uploads/2019/09/jobblabb-insta-1080x1080px-1-760x760.jpg',
+      uri: 'https://dc.cdnon.net/e/2020/09/26/3299463-1600728878.jpg',
     }}
     style={{
       width: '100%',
@@ -31,33 +30,6 @@ const Kommande = () => (
     style={{width: '100%', height: 250, borderRadius: 10, resizeMode: 'cover'}}
   />
 );
-const Turnerande = () => (
-  <Image
-    source={{
-      uri:
-        'https://www.arbetetsmuseum.se/wp-content/uploads/2014/12/turnerande-utstallning-760x760.jpg',
-    }}
-    style={{width: '100%', height: 300, borderRadius: 10, resizeMode: 'cover'}}
-  />
-);
-const EWK = () => (
-  <Image
-    source={{
-      uri:
-        'https://www.arbetetsmuseum.se/wp-content/uploads/2014/12/ewk-1-760x760.jpg',
-    }}
-    style={{width: '100%', height: 300, borderRadius: 10, resizeMode: 'cover'}}
-  />
-);
-const Tidigare = () => (
-  <Image
-    source={{
-      uri:
-        'https://www.arbetetsmuseum.se/wp-content/uploads/2015/02/finished-exhibitions-760x760.jpg',
-    }}
-    style={{width: '100%', height: 300, borderRadius: 10, resizeMode: 'cover'}}
-  />
-);
 
 const Exhibitions = ({navigation}) => {
   return (
@@ -66,7 +38,7 @@ const Exhibitions = ({navigation}) => {
         <TouchableOpacity onPress={() => navigation.navigate('Aktuella')}>
           <View style={styles.container}>
             <JL />
-            <View style={[styles.JL]} />
+            <View style={[styles.Kommande]} />
             <Text style={styles.vit}>AKTUELLA UTSTÄLLNINGAR</Text>
           </View>
         </TouchableOpacity>
@@ -75,7 +47,7 @@ const Exhibitions = ({navigation}) => {
           <View style={styles.container}>
             <Kommande />
             <View style={[styles.Kommande]} />
-            <Text style={styles.svart}>KOMMANDE UTSTÄLLNINGAR</Text>
+            <Text style={styles.vit}>KOMMANDE UTSTÄLLNINGAR</Text>
           </View>
         </TouchableOpacity>
       </ScrollView>
@@ -98,7 +70,7 @@ const styles = StyleSheet.create({
   },
 
   vit: {
-    fontSize: 20,
+    fontSize: 22,
     position: 'absolute',
     bottom: 23,
     width: '100%',
@@ -109,7 +81,7 @@ const styles = StyleSheet.create({
   },
 
   svart: {
-    fontSize: 20,
+    fontSize: 22,
     position: 'absolute',
     bottom: 23,
     width: '100%',
@@ -117,12 +89,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: 'black',
+    fontFamily: 'sans-serif',
   },
 
   JL: {
     flex: 1,
     position: 'absolute',
-    backgroundColor: 'black',
+    backgroundColor: '#ffc230',
     opacity: 0.8,
     width: '100%',
     bottom: 0,
@@ -133,8 +106,8 @@ const styles = StyleSheet.create({
   Kommande: {
     flex: 1,
     position: 'absolute',
-    backgroundColor: '#ffc230',
-    opacity: 0.85,
+    backgroundColor: 'black',
+    opacity: 0.5,
     width: '100%',
     bottom: 0,
     height: 80,

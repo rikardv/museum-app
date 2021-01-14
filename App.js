@@ -118,7 +118,9 @@ const App = () => {
         <Stack.Screen
           name="MapThird"
           component={MapThird}
-          options={{title: 'Våning 3'}}
+          options={{
+            title: 'Våning 3 - Välj en utställning',
+          }}
         />
 
         <Stack.Screen

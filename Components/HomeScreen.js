@@ -9,6 +9,7 @@ import {
   StatusBar,
   TouchableOpacity,
   ImageBackground,
+  Linking,
 } from 'react-native';
 
 const HomeScreen = ({navigation}) => {
@@ -25,6 +26,7 @@ const HomeScreen = ({navigation}) => {
         //allowing light, but not detailed shapes
         networkActivityIndicatorVisible={true}
       />
+
       <ImageBackground
         source={require('../assets/framsida.png')}
         style={{
@@ -82,6 +84,33 @@ const HomeScreen = ({navigation}) => {
       </View>
 
       <View style={styles.bottom}></View>
+      <View
+        style={{
+          alignSelf: 'flex-end',
+
+          justifyContent: 'center',
+          position: 'relative',
+          width: '30%',
+          flexDirection: 'row',
+          marginBottom: '2%',
+        }}>
+        <TouchableOpacity
+          onPress={() =>
+            Linking.openURL('https://www.facebook.com/arbetetsmuseum/')
+          }>
+          <Image
+            source={require('../assets/fcb.png')}
+            style={{width: 40, height: 40, resizeMode: 'contain'}}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            Linking.openURL('https://www.instagram.com/arbetetsmuseum/?hl=sv')
+          }>
+          <Image
+            source={require('../assets/inst.png')}
+            style={{width: 40, height: 40, resizeMode: 'contain'}}></Image>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
