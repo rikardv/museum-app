@@ -1,7 +1,6 @@
 # koma-projekt
 
-
-<h1>Screenshots<h1>
+ #### Screenshots ####
  
 <img src="assets/Screenshots/IMG_2618.PNG" width="150px" height="auto">
 <img src="assets/Screenshots/IMG_2619.PNG" width="150px" height="auto">
