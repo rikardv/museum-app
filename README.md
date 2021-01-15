@@ -1,11 +1,18 @@
-<h1>Koma<h/1>
+<h1>Besöksapp för Arbetets Museum<h/1>
 
 <h3>Skärmavbilder</h3>
  
-Startsida            |  Våningar |  Interaktiv karta | Vald utställning
-:-------------------------:|:-------------------------: |:-------------------------: |:-------------------------:
-![](assets/Screenshots/IMG_2618.PNG)  |  ![](assets/Screenshots/IMG_2619.PNG) |  ![](assets/Screenshots/IMG_2622.PNG) |  ![](assets/Screenshots/IMG_2623.PNG)
+<p float="left">
+  <img src="/assets/Screenshots/IMG_2618.PNG" width="200" />
+  <img src="/assets/Screenshots/IMG_2619.PNG" width="200" /> 
+  <img src="assets/Screenshots/IMG_2622.PNG" width="200" />
+ <img src="assets/Screenshots/IMG_2623.PNG" width="200" />
+</p>
 
-Startsida            |  Våningar |  Interaktiv karta 
-:-------------------------:|:-------------------------: |:-------------------------:
-![](assets/Screenshots/IMG_2618.PNG)  |  ![](assets/Screenshots/IMG_2619.PNG) |  ![](assets/Screenshots/IMG_2619.PNG)
+<p float="left">
+  <img src="/assets/Screenshots/IMG_2624.PNG" width="200" />
+  <img src="/assets/Screenshots/IMG_2620.PNG" width="200" /> 
+  <img src="assets/Screenshots/IMG_2621.PNG" width="200" />
+ 
+</p>
+
