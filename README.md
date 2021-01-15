@@ -1,13 +1,11 @@
-# koma-projekt
+<h1>Koma<h/1>
 
- #### Screenshots ####
+<h3>Skärmavbilder</h3>
  
-<img src="assets/Screenshots/IMG_2618.PNG" width="150px" height="auto">
-<img src="assets/Screenshots/IMG_2619.PNG" width="150px" height="auto">
-  <img src="assets/Screenshots/IMG_2622.PNG" width="150px" height="auto">
-  
-  <img src="assets/Screenshots/IMG_2623.PNG" width="150px" height="auto">
-  <br>
-  <img src="assets/Screenshots/IMG_2620.PNG" width="150px" height="auto">
-  <img src="assets/Screenshots/IMG_2621.PNG" width="150px" height="auto">
- 
+Startsida            |  Våningar |  Interaktiv karta | Vald utställning
+:-------------------------:|:-------------------------: |:-------------------------: |:-------------------------:
+![](assets/Screenshots/IMG_2618.PNG)  |  ![](assets/Screenshots/IMG_2619.PNG) |  ![](assets/Screenshots/IMG_2622.PNG) |  ![](assets/Screenshots/IMG_2623.PNG)
+
+Startsida            |  Våningar |  Interaktiv karta 
+:-------------------------:|:-------------------------: |:-------------------------:
+![](assets/Screenshots/IMG_2618.PNG)  |  ![](assets/Screenshots/IMG_2619.PNG) |  ![](assets/Screenshots/IMG_2619.PNG)
