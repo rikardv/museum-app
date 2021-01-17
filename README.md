@@ -1,12 +1,10 @@
-<h1>Besöksapp för Arbetets Museum<h/1>
+<h1>Visitor app for museum<h/1>
 
-<h3>Skärmavbilder</h3>
+<h3>Screenshots</h3>
  
 <p float="left">
   <img src="/assets/Screenshots/IMG_2618.PNG" width="150" />
   <img src="/assets/Screenshots/IMG_2619.PNG" width="150" /> 
-  <img src="assets/Screenshots/IMG_2622.PNG" width="150" />
- <img src="assets/Screenshots/IMG_2623.PNG" width="150" />
 </p>
 
 <p float="left">
@@ -15,4 +13,5 @@
   <img src="assets/Screenshots/IMG_2621.PNG" width="150" />
  
 </p>
-
+<h3>Interactive map</h3>
+<img src="assets/Screenshots/map.gif" width="150" />
