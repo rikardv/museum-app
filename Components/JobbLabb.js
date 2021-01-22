@@ -148,7 +148,7 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-       {/*} <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
+        {/*} <TouchableOpacity onPress={() => navigation.navigate('Floors')}>
           <View style={styles.container}>
             <Penna />
             <View style={[styles.Text]} />
@@ -172,7 +172,8 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('JobbLabbFaktiskt')}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('JobbLabbFaktiskt')}>
           <View style={styles.container}>
             <JL />
             <View style={[styles.Text]} />
@@ -212,7 +213,8 @@ const JobbLabb = ({navigation}) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('HistorienOmAlva')}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('HistorienOmAlva')}>
           <View style={styles.container}>
             <Alva />
             <View style={[styles.Text]} />

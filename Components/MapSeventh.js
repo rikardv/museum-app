@@ -108,7 +108,7 @@ const MapSeventh = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('Fotosalong2020'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 5}),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>

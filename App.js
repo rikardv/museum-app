@@ -31,17 +31,6 @@ import MapFifth from './Components/MapFifth.js';
 import JobbLabb from './Components/JobbLabb.js';
 import Kommande from './Components/Kommande.js';
 import Turnerande from './Components/Turnerande.js';
-import VadskulleEwk from './Components/AktuellaUtstallningar/VadskulleEwk.js';
-import BetterShelter from './Components/AktuellaUtstallningar/BetterShelter.js';
-import EnOvanligDag from './Components/AktuellaUtstallningar/EnOvanligDag.js';
-import FangaEnergin from './Components/AktuellaUtstallningar/FangaEnergin.js';
-import Fotosalong2020 from './Components/AktuellaUtstallningar/Fotosalong2020.js';
-import Framtidsland from './Components/AktuellaUtstallningar/Framtidsland.js';
-import HejRobot from './Components/AktuellaUtstallningar/HejRobot.js';
-import HistorienOmAlva from './Components/AktuellaUtstallningar/HistorienOmAlva.js';
-import JobbLabbFaktiskt from './Components/AktuellaUtstallningar/JobbLabbFaktiskt.js';
-import KrisOchVision from './Components/AktuellaUtstallningar/KrisOchVision.js';
-import LillaArbetet from './Components/AktuellaUtstallningar/LillaArbetet.js';
 import MapSeventh from './Components/MapSeventh.js';
 import Aktuella from './Components/Aktuella.js';
 import ExhibitInfo from './Components/ExhibitInfo';
@@ -149,61 +138,6 @@ const App = () => {
           name="Turnerande"
           component={Turnerande}
           options={{title: 'Turnerande utställningar'}}
-        />
-        <Stack.Screen
-          name="VadskulleEwk"
-          component={VadskulleEwk}
-          options={{title: 'Vad Skulle Ewk Sagt?'}}
-        />
-        <Stack.Screen
-          name="BetterShelter"
-          component={BetterShelter}
-          options={{title: 'Better Shelter'}}
-        />
-        <Stack.Screen
-          name="EnOvanligDag"
-          component={EnOvanligDag}
-          options={{title: 'En Ovanlig Vardag'}}
-        />
-        <Stack.Screen
-          name="FangaEnergin"
-          component={FangaEnergin}
-          options={{title: 'Fånga Energin!'}}
-        />
-        <Stack.Screen
-          name="Fotosalong2020"
-          component={Fotosalong2020}
-          options={{title: 'Fotosalong 2020'}}
-        />
-        <Stack.Screen
-          name="Framtidsland"
-          component={Framtidsland}
-          options={{title: 'Framtidsland'}}
-        />
-        <Stack.Screen
-          name="HejRobot"
-          component={HejRobot}
-          options={{title: 'Hej Robot!'}}
-        />
-        <Stack.Screen
-          name="HistorienOmAlva"
-          component={HistorienOmAlva}
-          options={{title: 'Historien Om Alva'}}
-        />
-        <Stack.Screen
-          name="JobbLabbFaktiskt"
-          component={JobbLabbFaktiskt}
-          options={{title: 'Jobb Labb'}}
-        />
-        <Stack.Screen
-          name="KrisOchVision"
-          component={KrisOchVision}
-          options={{title: 'Kris & Vison'}}
-        />
-        <Stack.Screen
-          name="LillaArbetet"
-          component={LillaArbetet}
-          options={{title: 'Lilla Arbetet'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

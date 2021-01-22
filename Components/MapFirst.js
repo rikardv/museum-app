@@ -109,7 +109,7 @@ const MapFirst = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('LillaArbetet'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 6}),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>

@@ -92,6 +92,26 @@ const ExhibitData = [
     description:
       'KREATIVA VERKSTAN TILLFÄLLIGT STÄNGD. Tyvärr är Kreativa Verkstan återigen stängd liksom resten av museet. Vi hoppas kunna öppna igen i början på nästa år.Kreativa verkstan är platsen där barn och vuxna skapar tillsammans av återvunnet material. Vi skapar kring olika teman som byts med jämna mellanrum.Barn behöver ha sällskap med en vuxen, inga barn får lämnas ensamma i verkstan. Skaparmaterial finns på plats och är kostnadsfritt. Fri entré. Välkomna hit och släpp loss fantasin!',
   },
+
+  {
+    id: 10,
+    title: 'Kris och Vision',
+    img: require('../assets/krisovision.jpg'),
+    startDate: 200101,
+    endDate: 201201,
+    description:
+      'KREATIVA VERKSTAN TILLFÄLLIGT STÄNGD. Tyvärr är Kreativa Verkstan återigen stängd liksom resten av museet. Vi hoppas kunna öppna igen i början på nästa år.Kreativa verkstan är platsen där barn och vuxna skapar tillsammans av återvunnet material. Vi skapar kring olika teman som byts med jämna mellanrum.Barn behöver ha sällskap med en vuxen, inga barn får lämnas ensamma i verkstan. Skaparmaterial finns på plats och är kostnadsfritt. Fri entré. Välkomna hit och släpp loss fantasin!',
+  },
+
+  {
+    id: 11,
+    title: 'Framtidsland',
+    img: require('../assets/krisovision.jpg'),
+    startDate: 200101,
+    endDate: 201201,
+    description:
+      'KREATIVA VERKSTAN TILLFÄLLIGT STÄNGD. Tyvärr är Kreativa Verkstan återigen stängd liksom resten av museet. Vi hoppas kunna öppna igen i början på nästa år.Kreativa verkstan är platsen där barn och vuxna skapar tillsammans av återvunnet material. Vi skapar kring olika teman som byts med jämna mellanrum.Barn behöver ha sällskap med en vuxen, inga barn får lämnas ensamma i verkstan. Skaparmaterial finns på plats och är kostnadsfritt. Fri entré. Välkomna hit och släpp loss fantasin!',
+  },
 ];
 
 export default ExhibitData;

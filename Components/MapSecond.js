@@ -113,7 +113,7 @@ const MapSecond = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('JobbLabbFaktiskt'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 7}),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>
@@ -148,7 +148,7 @@ const MapSecond = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('JobbLabbFaktiskt'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 9}),
                     setModalVisibleS(!modalVisibleS);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>

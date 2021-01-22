@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     textAlign: 'center',
     fontWeight: 'bold',
-    fontFamily: 'sans-serif',
     height: '30%',
     bottom: 0,
     textAlignVertical: 'center',

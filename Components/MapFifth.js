@@ -154,7 +154,7 @@ const MapFifth = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('HejRobot'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 2}),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>
@@ -189,7 +189,7 @@ const MapFifth = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('Framtidsland'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 11}),
                     setModalVisibleS(!modalVisibleS);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>
@@ -224,7 +224,7 @@ const MapFifth = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('KrisOchVision'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 10}),
                     setModalVisibleT(!modalVisibleT);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>

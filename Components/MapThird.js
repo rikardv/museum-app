@@ -95,7 +95,7 @@ const MapThird = ({navigation}) => {
               <TouchableOpacity
                 style={{...styles.openButton, backgroundColor: '#ffc230'}}
                 onPressIn={() => {
-                  navigation.navigate('VadskulleEwk'),
+                  navigation.navigate('ExhibitInfo', {exhibitID: 4}),
                     setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.textStyle}>Läs mer</Text>

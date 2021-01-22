@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'sans-serif',
   },
 
   JL: {
